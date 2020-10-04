@@ -1,0 +1,18 @@
+
+<div class="container my-3">
+    <div class="row">
+       
+        <div class="col-md-3 my-3 position-relative"  *ngFor="let person of people">
+            <div class="" *ngIf="person.profile_path !=null">
+                <img [src]='imgSrc+person.profile_path'  class="img-fluid rounded" alt="">
+                  <h2 class="h6 my-2 text-center"> {{person.name}}</h2>
+                 <div class="h6 vote" >{{person.popularity}}</div> 
+                
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--  -->

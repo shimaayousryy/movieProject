@@ -1,0 +1,30 @@
+
+<div class="container py-3">
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="img">
+                <img [src]="imgSrc+moviedetails?.poster_path" alt="" class="img-fluid">
+            </div>
+        </div> 
+
+
+        <div class="col-md-8">
+            <div class="details px-3">
+                <h2>{{moviedetails?.title}} {{moviedetails?.name}}</h2>
+                <p class="my-3">{{moviedetails?.tagline}}</p>
+                <span *ngFor="let gen of moviedetails?.genres" class="btn btn-info mr-2"> {{gen.name}}</span>
+                <p class="my-3">vote : {{moviedetails?.vote_average}}</p>
+                <p class="mb-3">vote count : {{moviedetails?.vote_count}}</p>
+                <p class="mb-3">popularity : {{moviedetails?.popularity}}</p>
+                <p class="mb-3" *ngIf="moviedetails?.release_date != null">release date : {{moviedetails?.release_date}}</p>
+
+                <p class="py-3">{{moviedetails?.overview}}</p>
+            </div>
+        </div> 
+
+
+
+    </div>
+</div>

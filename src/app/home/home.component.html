@@ -1,0 +1,47 @@
+
+
+<!-- 
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 mx-auto">
+            <ul class="list-unstyled" [routerLink]="['/home' , tranding.page]">
+               
+                <li>1 </li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>  -->
+
+
+
+<div class="container my-3">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="brdr w-50 mb-2"></div>
+            <div>
+                <h2> Tranding</h2>
+                <h2> Movies</h2>
+                <h2>to watch now</h2>
+                <p class="fontSizing"> most watched movies by days</p>
+            </div>
+            <div class="brdr w-100 mt-2"></div>
+        </div>
+
+
+        <div class="col-md-3 my-3 position-relative" *ngFor="let trend of tranding">
+            <div class="trend" [routerLink]="['/moviedetails' , trend.media_type , trend.id ]">
+                <img [src]='imgSrc+trend.poster_path' class="img-fluid">
+                <h2 class="h6 my-2">{{trend.title}} {{trend.name}}</h2>
+                <div class="h6 vote">{{trend.vote_average}}</div>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
